@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import './App.css';
-import PostForm from "./components/PostForm";
+import ForflytningForm from "./components/ForflytningForm";
 
 function App() {
   const [data, setData] = useState([]);
@@ -19,7 +19,7 @@ function App() {
 
   return (
     <div className="App">
-    <PostForm />
+    <ForflytningForm />
      <h1>mattilsynet </h1>
      <div>
      {data.map(item => (

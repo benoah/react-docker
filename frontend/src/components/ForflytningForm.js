@@ -1,13 +1,9 @@
-import React, { useState } from "react";
-import  Axios  from 'axios'
+import React, {useState} from 'react'
+import Axios from "axios"
 
-export default function PostForm() {
+export default function ForflytningForm() {
 
-
-
-
-    
-const url= "http://localhost:5000/registrerforflytning"
+    const url= "http://localhost:5000/registrerforflytning"
 const [data, setData] = useState({
     name:"",
     date:"",
@@ -35,18 +31,15 @@ function handle(e) {
 }
 
 
-
 return (
     <div>
-    <h1> PostForm</h1>
+    <h1> Forflytningsform</h1>
     <form onSubmit={(e)=> submit(e)}>
     <input onChange={(e)=>handle(e)} id="name" value={data.name} placeholder="name" type="text"></input>
     <input onChange={(e)=>handle(e)} id="date" value={data.date} placeholder="date" type="date"></input>
     <input onChange={(e)=>handle(e)} id="iduser" value={data.iduser} placeholder="iduser" type="number"></input>
     <button>submit</button>
     </form>
-    
-    
     </div>
   )
 }
